@@ -9,6 +9,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/budgetbuddylive/:path*',
+        destination: 'https://budgetbuddylive-emegs13dj-turnerpeters-6002s-projects.vercel.app/:path*',
+      },
+    ];
+  },
 }
 
 export default nextConfig

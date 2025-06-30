@@ -1,23 +1,47 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { z } from 'zod'; // Import Zod
 
-// Define the path to the submissions file
-const submissionsFilePath = path.join(process.cwd(), 'form_submissions.txt');
+// Define a Zod schema for the expected form data
+const FormDataSchema = z.object({
+  // Adjust these fields based on your actual form data
+  name: z.string().min(1, { message: "Name is required" }),
+  email: z.string().email({ message: "Invalid email address" }),
+  // Add other fields as necessary, for example:
+  // message: z.string().optional(),
+});
 
 export async function POST(request: NextRequest) {
   try {
-    const data = await request.json();
+    const requestBody = await request.json();
+
+    // Validate the request body using Zod
+    const validationResult = FormDataSchema.safeParse(requestBody);
+
+    if (!validationResult.success) {
+      return NextResponse.json(
+        { 
+          message: 'Invalid form data', 
+          errors: validationResult.error.flatten().fieldErrors 
+        },
+        { status: 400 }
+      );
+    }
+
+    // Use the validated data
+    const validatedData = validationResult.data;
     
-    // Add a timestamp to the data
-    const timestamp = new Date().toISOString();
-    const entry = `Timestamp: ${timestamp}\nData: ${JSON.stringify(data)}\n---\n`;
+    // Log the form submission (replace with email service or other storage as needed)
+    console.log('Form submission received:', {
+      ...validatedData,
+      timestamp: new Date().toISOString()
+    });
 
-    // Append data to the file
-    fs.appendFileSync(submissionsFilePath, entry);
-
-    return NextResponse.json({ message: 'Data saved successfully' }, { status: 200 });
+    return NextResponse.json({ message: 'Form submission received successfully' }, { status: 200 });
   } catch (error) {
+    // Catch errors from request.json() if body is not valid JSON
+    if (error instanceof SyntaxError) {
+        return NextResponse.json({ message: 'Invalid JSON format in request body'}, {status: 400 });
+    }
     console.error('Error saving form data:', error);
     return NextResponse.json({ message: 'Error saving data', error: (error as Error).message }, { status: 500 });
   }

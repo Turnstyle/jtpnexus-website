@@ -1,16 +1,10 @@
 'use client'
 
-import { useState } from "react"
 import { SocialLinks } from "@/components/social-links"
 import { LinkCard } from "@/components/link-card"
 import { BackgroundAnimation } from "@/components/background-animation"
-import { JobSparcComingSoonModal } from "@/components/jobsparc-coming-soon-modal"
-import { ProduceSectionComingSoonModal } from "@/components/produce-section-coming-soon-modal"
 
 export function PageContent() {
-  const [isJobSparcModalOpen, setIsJobSparcModalOpen] = useState(false)
-  const [isProduceModalOpen, setIsProduceModalOpen] = useState(false)
-
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-slate-900 dark:via-purple-950 dark:to-slate-900">
       <BackgroundAnimation />
@@ -42,7 +36,7 @@ export function PageContent() {
             <LinkCard
               title="RIA Hunter"
               description="Find out who's who in private investments"
-              href="/ria-hunter"
+              href="https://ria-hunter.jtpnexus.com"
               ctaText="Give It A Try"
               gradient="from-custom-purple-start to-custom-purple-end"
               icon="search"
@@ -50,30 +44,24 @@ export function PageContent() {
             <LinkCard
               title="JobSparc"
               description="Spark the flame that ignites your job hunt"
-              href="#"
+              href="/jobsparc"
               ctaText="Give It A Try"
               gradient="from-orange-500 to-pink-500"
               icon="flame"
-              onClick={() => setIsJobSparcModalOpen(true)}
             />
             <LinkCard
               title="The Produce Section"
               description="A whimsical GenAI Image maker for people who love their fruits & veggies"
-              href="#"
+              href="/produce-section"
               ctaText="Give It A Try"
               gradient="from-green-500 to-lime-500"
               icon="apple"
-              onClick={() => setIsProduceModalOpen(true)}
             />
           </div>
         </div>
 
         {/* Social Links Floating Box */}
         <SocialLinks />
-
-        {/* Modals */}
-        <JobSparcComingSoonModal isOpen={isJobSparcModalOpen} onClose={() => setIsJobSparcModalOpen(false)} />
-        <ProduceSectionComingSoonModal isOpen={isProduceModalOpen} onClose={() => setIsProduceModalOpen(false)} />
 
         {/* Decorative elements */}
         <div className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-purple-300 opacity-20 blur-3xl dark:bg-purple-900"></div>

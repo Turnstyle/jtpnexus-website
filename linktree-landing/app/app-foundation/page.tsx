@@ -97,7 +97,7 @@ export default function AppFoundationPage() {
               <Layers className="h-16 w-16 text-emerald-400 mx-auto mb-6 [filter:drop-shadow(0_0_5px_theme(colors.emerald.500))]" />
               <h2 className="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">What&apos;s This &quot;App Foundation&quot; Gizmo?</h2>
               <p className="text-lg text-slate-300 leading-relaxed">
-                Imagine you want to build the COOLEST treehouse ever. You wouldn&apos;t just start nailing random pieces of wood together, right? You&apos;d want a plan, some good tools, and maybe some pre-built parts like a sturdy ladder or strong walls.
+                Imagine you want to build the COOLEST treehouse ever. You wouldn&apos;t just start nailing random pieces of wood together, right? You&apos;d want a plan, some good tools, and maybe some pre-built parts like a sturdy ladder or strong walls. This is the heart of vibe coding <span title="Vibe Coding is a software development approach that prioritizes the developer's intuition and flow state, encouraging rapid iteration and experimentation. It emphasizes creativity and a deep connection with the project, allowing for more organic and innovative solutions. It's about feeling the rhythm of the code and letting that guide the development process, often leading to breakthroughs that rigid methodologies might stifle. This often involves AI.">ⓘ</span>.
                 <br/><br/>
                 <strong className="text-white">App Foundation</strong> is kind of like that, but for making computer and phone apps! It&apos;s a special starter kit I&apos;m building. It has:
               </p>
@@ -108,6 +108,9 @@ export default function AppFoundationPage() {
               </ul>
               <p className="text-lg text-slate-300 leading-relaxed mt-4">
                 It&apos;s all about making it easier and quicker to build really good, powerful apps that people will love to use.
+              </p>
+              <p className="text-lg text-slate-300 leading-relaxed mt-2">
+                Get started like me by watching Riely Brown&apos;s viral YouTube video from February 2025 <a href="https://youtu.be/faezjTHA5SU?si=lcpetOXnd5nb5LRC" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 underline">here</a>.
               </p>
             </section>
 
@@ -192,7 +195,7 @@ export default function AppFoundationPage() {
           &copy; {new Date().getFullYear()} JTP Nexus. Exploring the future, one line of code at a time.
         </p>
         <p className="text-xs text-slate-500 mt-1">
-           This page explains the "App Foundation" project by JT Peters.
+           This page explains the &quot;App Foundation&quot; project by JT Peters.
         </p>
       </footer>
     </div>

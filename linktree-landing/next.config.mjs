@@ -13,7 +13,7 @@ const nextConfig = {
     return [
       {
         source: '/budgetbuddylive/:path*',
-        destination: 'https://budgetbuddylive-emegs13dj-turnerpeters-6002s-projects.vercel.app/:path*',
+        destination: 'https://budgetbuddylive-mocha.vercel.app/:path*',
       },
     ];
   },
@@ -27,7 +27,7 @@ const nextConfig = {
             value: 'jtpnexus.com',
           },
           {
-            key: 'X-Original-Host',
+            key: 'Original-Host',
             value: 'jtpnexus.com',
           },
         ],

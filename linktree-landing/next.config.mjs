@@ -17,6 +17,23 @@ const nextConfig = {
       },
     ];
   },
+  async headers() {
+    return [
+      {
+        source: '/budgetbuddylive/:path*',
+        headers: [
+          {
+            key: 'X-Forwarded-Host',
+            value: 'jtpnexus.com',
+          },
+          {
+            key: 'X-Original-Host',
+            value: 'jtpnexus.com',
+          },
+        ],
+      },
+    ];
+  },
 }
 
 export default nextConfig

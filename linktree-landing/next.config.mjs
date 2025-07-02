@@ -13,7 +13,8 @@ const nextConfig = {
     return [
       {
         source: '/budgetbuddylive/:path*',
-        destination: 'https://budgetbuddylive-mocha.vercel.app/:path*',
+        destination:
+          'https://budgetbuddylive-cxq36dgsj-turnerpeters-6002s-projects.vercel.app/:path*',
       },
     ];
   },

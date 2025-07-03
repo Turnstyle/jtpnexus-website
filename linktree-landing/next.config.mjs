@@ -14,7 +14,7 @@ const nextConfig = {
       {
         source: '/budgetbuddylive/:path*',
         destination:
-          'https://budgetbuddylive-mocha.vercel.app/:path*',
+          `${process.env.BUDGET_BUDDY_HOST || 'https://budgetbuddylive-mocha.vercel.app'}/:path*`,
       },
     ];
   },

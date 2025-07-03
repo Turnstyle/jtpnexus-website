@@ -65,4 +65,3 @@ cypress/screenshots/
 # Blitz auto-generated files
 blitz.config.js
 blitz-env.d.ts
-.vercel

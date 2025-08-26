@@ -268,7 +268,7 @@ export default function HomePage() {
                 Music Mana
               </h2>
               <p style={{ color: '#9ca3af' }}>
-                Intelligent music discovery and playlist management
+                Emotive music discovery and AI-curated playlist creation. (Built inside 24-hrs)
               </p>
             </div>
           </a>
@@ -292,7 +292,7 @@ export default function HomePage() {
                 RIA Hunter
               </h2>
               <p style={{ color: '#9ca3af' }}>
-                Find out who's who in private investments
+                Find out who's who in private investments with GenAI
               </p>
             </div>
           </a>
@@ -316,7 +316,7 @@ export default function HomePage() {
                 Cyber Spy Hunter
               </h2>
               <p style={{ color: '#9ca3af' }}>
-                Advanced cybersecurity monitoring and threat detection
+                A mobile web-app game of a classic Nintendo title (Test of ChatGPT Agent mode)
               </p>
             </div>
           </a>
@@ -388,7 +388,7 @@ export default function HomePage() {
                 Snake Game
               </h2>
               <p style={{ color: '#9ca3af' }}>
-                Classic snake game with modern design
+                Classic snake game with modern design. (One shot prompt to ChatGPT 5 Agent mode)
               </p>
             </div>
           </a>

@@ -74,6 +74,11 @@ export default function HomePage() {
             onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
             onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
             aria-label="LinkedIn Profile"
+            onClick={() => {
+              if (window.vercelAnalytics) {
+                window.vercelAnalytics.track('click', { name: 'linkedin_link' });
+              }
+            }}
           >
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -111,6 +116,11 @@ export default function HomePage() {
             onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
             onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
             aria-label="X (formerly Twitter) Profile"
+            onClick={() => {
+              if (window.vercelAnalytics) {
+                window.vercelAnalytics.track('click', { name: 'x_twitter_link' });
+              }
+            }}
           >
             <svg
               viewBox="0 0 24 24"
@@ -144,6 +154,11 @@ export default function HomePage() {
             onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
             onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
             aria-label="GitHub Profile"
+            onClick={() => {
+              if (window.vercelAnalytics) {
+                window.vercelAnalytics.track('click', { name: 'github_link' });
+              }
+            }}
           >
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -162,7 +177,7 @@ export default function HomePage() {
           </a>
           
           <a
-            href="mailto:john@jtpnexus.com"
+            href="mailto:turnerpeters+jtpnexus@gmail.com"
             style={{
               display: 'flex',
               height: '2rem',
@@ -178,6 +193,11 @@ export default function HomePage() {
             onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
             onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
             aria-label="Contact Me"
+            onClick={() => {
+              if (window.vercelAnalytics) {
+                window.vercelAnalytics.track('click', { name: 'email_link' });
+              }
+            }}
           >
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -205,7 +225,35 @@ export default function HomePage() {
           marginRight: 'auto',
           marginBottom: '2rem'
         }}>
-          <Link href="/music-mana" style={{ textDecoration: 'none' }}>
+          <a href="https://www.prompt-box.app/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} onClick={() => {
+              if (window.vercelAnalytics) {
+                window.vercelAnalytics.track('click', { name: 'prompt_box_link' });
+              }
+            }}>
+            <div style={{ 
+              backgroundColor: 'rgba(31, 41, 55, 0.6)',
+              padding: '1.5rem',
+              borderRadius: '0.75rem',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+              border: '1px solid rgba(55, 65, 81, 0.5)',
+              transition: 'all 0.2s',
+              cursor: 'pointer',
+              backdropFilter: 'blur(10px)'
+            }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: '600', color: '#d1d5db', marginBottom: '0.5rem' }}>
+                Prompt Box
+              </h2>
+              <p style={{ color: '#9ca3af' }}>
+                Create, organize, and manage AI prompts with sophisticated version control
+              </p>
+            </div>
+          </a>
+          
+          <a href="https://www.music-mana.xyz/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} onClick={() => {
+              if (window.vercelAnalytics) {
+                window.vercelAnalytics.track('click', { name: 'music_mana_link' });
+              }
+            }}>
             <div style={{ 
               backgroundColor: 'rgba(31, 41, 55, 0.6)',
               padding: '1.5rem',
@@ -223,9 +271,13 @@ export default function HomePage() {
                 Intelligent music discovery and playlist management
               </p>
             </div>
-          </Link>
+          </a>
           
-          <Link href="https://ria-hunter.jtpnexus.com" style={{ textDecoration: 'none' }}>
+          <a href="https://ria-hunter.app/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} onClick={() => {
+              if (window.vercelAnalytics) {
+                window.vercelAnalytics.track('click', { name: 'ria_hunter_link' });
+              }
+            }}>
             <div style={{ 
               backgroundColor: 'rgba(31, 41, 55, 0.6)',
               padding: '1.5rem',
@@ -243,9 +295,13 @@ export default function HomePage() {
                 Find out who's who in private investments
               </p>
             </div>
-          </Link>
+          </a>
           
-          <Link href="/cyber-spy-hunter" style={{ textDecoration: 'none' }}>
+          <a href="https://turnstyle.github.io/cyberspyhunter/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} onClick={() => {
+              if (window.vercelAnalytics) {
+                window.vercelAnalytics.track('click', { name: 'cyber_spy_hunter_link' });
+              }
+            }}>
             <div style={{ 
               backgroundColor: 'rgba(31, 41, 55, 0.6)',
               padding: '1.5rem',
@@ -263,29 +319,13 @@ export default function HomePage() {
                 Advanced cybersecurity monitoring and threat detection
               </p>
             </div>
-          </Link>
+          </a>
           
-          <Link href="/snake-game" style={{ textDecoration: 'none' }}>
-            <div style={{ 
-              backgroundColor: 'rgba(31, 41, 55, 0.6)',
-              padding: '1.5rem',
-              borderRadius: '0.75rem',
-              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-              border: '1px solid rgba(55, 65, 81, 0.5)',
-              transition: 'all 0.2s',
-              cursor: 'pointer',
-              backdropFilter: 'blur(10px)'
+          <a href="https://www.produce-section.xyz/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} onClick={() => {
+              if (window.vercelAnalytics) {
+                window.vercelAnalytics.track('click', { name: 'produce_section_link' });
+              }
             }}>
-              <h2 style={{ fontSize: '1.5rem', fontWeight: '600', color: '#d1d5db', marginBottom: '0.5rem' }}>
-                Snake Game
-              </h2>
-              <p style={{ color: '#9ca3af' }}>
-                Classic snake game with modern design
-              </p>
-            </div>
-          </Link>
-          
-          <Link href="/produce-section" style={{ textDecoration: 'none' }}>
             <div style={{ 
               backgroundColor: 'rgba(31, 41, 55, 0.6)',
               padding: '1.5rem',
@@ -303,7 +343,55 @@ export default function HomePage() {
                 A whimsical GenAI Image maker for people who love their fruits & veggies
               </p>
             </div>
-          </Link>
+          </a>
+
+          <a href="https://turnstyle.github.io/websiterequestform/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} onClick={() => {
+              if (window.vercelAnalytics) {
+                window.vercelAnalytics.track('click', { name: 'form_clone_link' });
+              }
+            }}>
+            <div style={{ 
+              backgroundColor: 'rgba(31, 41, 55, 0.6)',
+              padding: '1.5rem',
+              borderRadius: '0.75rem',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+              border: '1px solid rgba(55, 65, 81, 0.5)',
+              transition: 'all 0.2s',
+              cursor: 'pointer',
+              backdropFilter: 'blur(10px)'
+            }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: '600', color: '#d1d5db', marginBottom: '0.5rem' }}>
+                Google Form Clone
+              </h2>
+              <p style={{ color: '#9ca3af' }}>
+                Custom form with email, Google Sheets, and Slack integration showcase
+              </p>
+            </div>
+          </a>
+
+          <a href="https://chatgpt.com/canvas/shared/689578017d108191a44c9669646bf9e4" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} onClick={() => {
+              if (window.vercelAnalytics) {
+                window.vercelAnalytics.track('click', { name: 'snake_game_link' });
+              }
+            }}>
+            <div style={{ 
+              backgroundColor: 'rgba(31, 41, 55, 0.6)',
+              padding: '1.5rem',
+              borderRadius: '0.75rem',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+              border: '1px solid rgba(55, 65, 81, 0.5)',
+              transition: 'all 0.2s',
+              cursor: 'pointer',
+              backdropFilter: 'blur(10px)'
+            }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: '600', color: '#d1d5db', marginBottom: '0.5rem' }}>
+                Snake Game
+              </h2>
+              <p style={{ color: '#9ca3af' }}>
+                Classic snake game with modern design
+              </p>
+            </div>
+          </a>
         </div>
       </div>
       

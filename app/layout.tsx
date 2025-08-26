@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'JTP Nexus',
-  description: 'A collection of tools and applications by John T. Peters',
+  description: 'A collection of tools, applications, and resources by John Turner Peters',
 };
 
 export default function RootLayout({

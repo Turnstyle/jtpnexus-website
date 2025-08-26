@@ -340,7 +340,7 @@ export default function HomePage() {
                 The Produce Section
               </h2>
               <p style={{ color: '#9ca3af' }}>
-                A whimsical GenAI Image maker for people who love their fruits & veggies
+                A whimsical GenAI Image maker for people who love their fruits & veggies. (First Vibe Coding Project)
               </p>
             </div>
           </a>

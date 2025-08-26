@@ -45,7 +45,7 @@ export default function HomePage() {
           marginLeft: 'auto',
           marginRight: 'auto'
         }}>
-          A collection of tools, applications, and resources by John Turner Peters
+          A collection of tools, applications, and resources by<br />John Turner Peters
         </p>
         
         {/* Social Links */}

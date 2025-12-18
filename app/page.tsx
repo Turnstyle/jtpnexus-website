@@ -243,7 +243,7 @@ export default function HomePage() {
                 Hello Telle
               </h2>
               <p style={{ color: '#9ca3af' }}>
-                Senior voice companion AI—activated, funded, and appreciated by loved ones. (End-to-end agentic operations)
+                Voice companionship for senior citizens—activated, funded, and appreciated by loved ones. (End-to-end agentic operations)
               </p>
             </div>
           </a>

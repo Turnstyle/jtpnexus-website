@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { BackgroundAnimation } from '../components/background-animation';
 
 export default function HomePage() {
@@ -225,6 +224,30 @@ export default function HomePage() {
           marginRight: 'auto',
           marginBottom: '2rem'
         }}>
+          <a href="https://www.hellotelle.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} onClick={() => {
+              if (window.vercelAnalytics) {
+                window.vercelAnalytics.track('click', { name: 'hellotelle_link' });
+              }
+            }}>
+            <div style={{ 
+              backgroundColor: 'rgba(31, 41, 55, 0.6)',
+              padding: '1.5rem',
+              borderRadius: '0.75rem',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+              border: '1px solid rgba(55, 65, 81, 0.5)',
+              transition: 'all 0.2s',
+              cursor: 'pointer',
+              backdropFilter: 'blur(10px)'
+            }}>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: '600', color: '#d1d5db', marginBottom: '0.5rem' }}>
+                HelloTelle
+              </h2>
+              <p style={{ color: '#9ca3af' }}>
+                Scheduled companionship calls for seniors—with wellness check-ins and family summaries.
+              </p>
+            </div>
+          </a>
+
           <a href="https://www.prompt-box.app/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} onClick={() => {
               if (window.vercelAnalytics) {
                 window.vercelAnalytics.track('click', { name: 'prompt_box_link' });
@@ -269,30 +292,6 @@ export default function HomePage() {
               </h2>
               <p style={{ color: '#9ca3af' }}>
                 Emotive music discovery and AI-curated playlist creation. (Built inside 24-hrs)
-              </p>
-            </div>
-          </a>
-          
-          <a href="https://ria-hunter.app/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} onClick={() => {
-              if (window.vercelAnalytics) {
-                window.vercelAnalytics.track('click', { name: 'ria_hunter_link' });
-              }
-            }}>
-            <div style={{ 
-              backgroundColor: 'rgba(31, 41, 55, 0.6)',
-              padding: '1.5rem',
-              borderRadius: '0.75rem',
-              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-              border: '1px solid rgba(55, 65, 81, 0.5)',
-              transition: 'all 0.2s',
-              cursor: 'pointer',
-              backdropFilter: 'blur(10px)'
-            }}>
-              <h2 style={{ fontSize: '1.5rem', fontWeight: '600', color: '#d1d5db', marginBottom: '0.5rem' }}>
-                RIA Hunter
-              </h2>
-              <p style={{ color: '#9ca3af' }}>
-                Find out who's who in private investments with GenAI
               </p>
             </div>
           </a>

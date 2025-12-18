@@ -240,10 +240,10 @@ export default function HomePage() {
               backdropFilter: 'blur(10px)'
             }}>
               <h2 style={{ fontSize: '1.5rem', fontWeight: '600', color: '#d1d5db', marginBottom: '0.5rem' }}>
-                HelloTelle
+                Hello Telle
               </h2>
               <p style={{ color: '#9ca3af' }}>
-                Scheduled companionship calls for seniors—with wellness check-ins and family summaries.
+                A voice AI companion for seniors—set up and paid for by a loved one (caregiver). (Wholly Agentic Company Internally)
               </p>
             </div>
           </a>
